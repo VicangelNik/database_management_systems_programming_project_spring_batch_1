@@ -20,7 +20,7 @@ import lombok.Setter;
 public class WeaponsEntity {
 
   @Id
-  @Column(name = "weapon_used_cd")
+  @Column(name = "weapon_used_cd", columnDefinition = "smallint")
   private Integer weaponUsedCd;
 
   @Column(name = "weapon_desc")

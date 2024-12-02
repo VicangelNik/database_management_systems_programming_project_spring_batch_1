@@ -24,6 +24,7 @@ public class AreaEntity {
    * These areas are sequentially numbered from 1 to 21.
    */
   @Id
+  @Column(name = "area", columnDefinition = "smallint")
   private Integer area; // area id
 
   /**

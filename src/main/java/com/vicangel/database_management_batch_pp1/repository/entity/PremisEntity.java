@@ -20,7 +20,7 @@ import lombok.Setter;
 public class PremisEntity {
 
   @Id
-  @Column(name = "premic_cd")
+  @Column(name = "premic_cd", columnDefinition = "smallint")
   private Integer premisCd;
 
   @Column(name = "premis_desc")

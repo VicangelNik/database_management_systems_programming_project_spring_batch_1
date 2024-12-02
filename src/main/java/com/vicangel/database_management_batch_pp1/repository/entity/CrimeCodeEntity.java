@@ -20,7 +20,7 @@ import lombok.Setter;
 public class CrimeCodeEntity {
 
   @Id
-  @Column(name = "crm_cd")
+  @Column(name = "crm_cd", columnDefinition = "smallint")
   private Short crimeCode;
 
   @Column(name = "crm_cd_desc")

@@ -29,7 +29,6 @@ public class CrimeDataItemProcessor implements ItemProcessor<DataItemDTO, Report
 
   private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("MM/dd/yyyy hh:mm:ss a");
   private static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern("HHmm");
-  private static final DateTimeFormatter OCC_FORMATTER = DateTimeFormatter.ofPattern("MM/dd/yyyy hh:mm:ss");
 
   @Override
   public ReportedCrimesEntity process(@NonNull final DataItemDTO item) {

@@ -26,35 +26,35 @@ import lombok.Setter;
 @Table(name = "reporting_districts")
 public class ReportingDistrictsEntity {
 
-  @Column(name = "fid", unique = true, nullable = false)
+  @Column(name = "fid", columnDefinition = "smallint", unique = true, nullable = false)
   private Integer fid;
 
   @Id
-  @Column(name = "rep_dist") // reporting District Number
+  @Column(name = "rep_dist", columnDefinition = "smallint") // reporting District Number
   private Integer repDist;
 
-  @Column(name = "prec")
+  @Column(name = "prec", columnDefinition = "smallint")
   private Integer prec;
 
-  @Column(name = "aprec")
+  @Column(name = "aprec", columnDefinition = "varchar(20)")
   private String apRec;
 
-  @Column(name = "bureau")
+  @Column(name = "bureau", columnDefinition = "varchar(20)")
   private String bureau;
 
-  @Column(name = "basic_car")
+  @Column(name = "basic_car", columnDefinition = "varchar(10)")
   private String basicCar;
 
-  @Column(name = "agency")
+  @Column(name = "agency", columnDefinition = "char(2)")
   private String agency;
 
-  @Column(name = "name")
+  @Column(name = "name", columnDefinition = "varchar(10)")
   private String name;
 
   @Column(name = "shape_leng")
   private Double shapeLeng;
 
-  @Column(name = "abbrev_apr")
+  @Column(name = "abbrev_apr", columnDefinition = "varchar(5)")
   private String abbrevApr;
 
   @Column(name = "shape_area")

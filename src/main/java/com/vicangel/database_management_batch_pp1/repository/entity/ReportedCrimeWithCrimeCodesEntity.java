@@ -37,6 +37,6 @@ public class ReportedCrimeWithCrimeCodesEntity {
   @JoinColumn(name = "crm_cd", foreignKey = @ForeignKey(name = "FK_Reported_With_Codes_Crime_Codes"))
   private CrimeCodeEntity crimeCode;
 
-  @Column(name = "crm_cd_level")
+  @Column(name = "crm_cd_level", columnDefinition = "smallint")
   private Short crimeCodeLevel;
 }
