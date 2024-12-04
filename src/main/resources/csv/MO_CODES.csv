@@ -193,6 +193,7 @@ id; moCode
 448;Grabbed
 449;Put a weapon to body
 450;Suspect shot at victim (no hits)
+451;
 500;Sex related acts
 501;Susp ejaculated outside victim
 502;Fecal Fetish
@@ -264,6 +265,11 @@ id; moCode
 605;Traffic Accident/Traffic related incident
 701;THEFT: Trick or Device
 800;BUNCO
+853;
+852;
+856;
+857;
+858;
 901;Organized Crime
 902;Political Activity
 903;Hatred/Prejudice
@@ -310,6 +316,7 @@ id; moCode
 944;Bait Operation
 945;Estes Robbery
 946;Gang Feud
+947;
 1000;Suspects offers/solicits
 1001;Aid for vehicle
 1002;Amusement
@@ -459,6 +466,25 @@ id; moCode
 1419;Firearm booked as evidence
 1420;Video surveillance booked/available
 1501;Other MO (see rpt)
+1506;Bias: Physical disability
+1505;Bias: Mental disability
+1510;Bias: AntiTransgender
+1516;Bias: Anti-Hispanic or Latino
+1517;Bias: Anti-Multiple Races (Group)
+1518;Bias: Anti-Native Hawaiian or Other Pacific Islander
+1519;Bias: Anti-Other Race/Ethnicity/Aucestry
+1520;Bias: Anti-White
+1529;Bias: Anti-Mormon
+1530;Bias: Anti-Multiple Religions Group
+1531;Bias: Anti-other Christian
+1532;Bias: Anti-other Religion
+1533;Bias: Anti-Protestant
+1534;Bias: Anti-Sikh
+1535;Bias: Anti-Bisexual
+1536;Bias: Anti-Gay (Male)
+1537;Bias: Anti-Heterosexual
+1538;Bias: Anti-Lesbian
+1539;Bias: AntiLesbian/Gay/Bisexual or Transgender (Mixed Group)
 1601;Bodily Force
 1602;Cutting Tool
 1603;Knob Twist
@@ -567,6 +593,12 @@ id; moCode
 2050;Victim was passenger on train
 2051;Suspect was passenger on bus
 2052;Suspect was passenger on train
+2053;Victim targeted based on Religion
+2054;Victim targeted based on Sexual Orientation
+2055;Victim targeted based on Race/Ethnicity/Ancestry
+2058;Victim targeting based on Gender NonConforming
+2059;
+2060;
 9999;Indistinctive MO
 2100;Observation/Surveillance
 2101;Counter Surveillance efforts

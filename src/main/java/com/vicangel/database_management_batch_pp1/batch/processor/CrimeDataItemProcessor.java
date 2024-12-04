@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.lang.NonNull;
+import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 
 import com.vicangel.database_management_batch_pp1.model.DataItemDTO;
@@ -67,7 +68,7 @@ public class CrimeDataItemProcessor implements ItemProcessor<DataItemDTO, Report
       .occDateTime(getOccDateTime(item))
       .area(area)
       .part12(item.part_1_2())
-      .reportingDistrict(ReportingDistrictsEntity.builder().repDist(item.rpt_dist()).build())
+      .reportingDistrict(getReportingDistrict(item.rpt_dist())) // 942 exclude
       .moCodes(moCodesEntitySet.isEmpty() ? null : moCodesEntitySet)
       .victimInfo(victimInfo)
       .premis(premis)
@@ -77,6 +78,14 @@ public class CrimeDataItemProcessor implements ItemProcessor<DataItemDTO, Report
       .build();
   }
 
+  @Nullable
+  private static ReportingDistrictsEntity getReportingDistrict(Integer rptDist) {
+    if (rptDist == null || rptDist == 942) {
+      return null;
+    }
+    return ReportingDistrictsEntity.builder().repDist(rptDist).build();
+  }
+
   private static Set<MoCodesEntity> getMoCodesEntities(DataItemDTO item) {
     Set<MoCodesEntity> moCodesEntitySet = new HashSet<>();
 
@@ -84,7 +93,6 @@ public class CrimeDataItemProcessor implements ItemProcessor<DataItemDTO, Report
                          ? new HashSet<>()
                          : Arrays.stream(item.mocodes().trim().split(" "))
                            .filter(m -> !m.isEmpty())
-                           .filter(m -> !"0947".equals(m)) // it does not exist in mo codes csv
                            .map(Short::parseShort)
                            .collect(Collectors.toSet());
 

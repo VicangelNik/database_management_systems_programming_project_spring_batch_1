@@ -257,7 +257,7 @@ class BatchConfig {
   public FlatFileItemReader<DataItemDTO> csvReader() {
     return new FlatFileItemReaderBuilder<DataItemDTO>()
       .linesToSkip(1)
-      .maxItemCount(100)
+      .maxItemCount(5000)
       .name("csvCrimeDataReader")
       .resource(new ClassPathResource("csv/Crime_Data_from_2020_to_Present_20241110.csv"))
       .delimited()

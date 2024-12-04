@@ -22,6 +22,6 @@ public class MoCodesEntity {
   @Id
   private Short id;
 
-  @Column(name = "mo_code", columnDefinition = "varchar(200)", nullable = false)
+  @Column(name = "mo_code", columnDefinition = "varchar(200)")
   private String moCode;
 }
