@@ -23,7 +23,7 @@ public class VictimInfoEntity {
   @Column(name = "dr_no")
   private Long drNo;
   @Column(name = "vict_age", columnDefinition = "smallint")
-  private Short victAge;
+  private Integer victAge;
   @Column(name = "vict_sex")
   private Character victSex;
   @Column(name = "vict_descent")

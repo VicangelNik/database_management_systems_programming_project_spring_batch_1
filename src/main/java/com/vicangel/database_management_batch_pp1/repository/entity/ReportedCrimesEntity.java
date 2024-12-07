@@ -8,6 +8,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ForeignKey;
 import jakarta.persistence.Id;
+import jakarta.persistence.Index;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
@@ -25,7 +26,10 @@ import lombok.Setter;
 @Setter
 @Builder
 @Entity
-@Table(name = "reported_crimes")
+@Table(name = "reported_crimes", indexes = {
+  @Index(name = "idx_name_reported", columnList = "dateReported"),
+  @Index(name = "idx_crime_occurred_date_time", columnList = "occDateTime")
+})
 public class ReportedCrimesEntity {
 
   @Id

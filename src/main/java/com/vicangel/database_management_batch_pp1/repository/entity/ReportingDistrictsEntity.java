@@ -26,7 +26,11 @@ import lombok.Setter;
 @Table(name = "reporting_districts")
 public class ReportingDistrictsEntity {
 
-  @Column(name = "fid", columnDefinition = "smallint", unique = true, nullable = false)
+  /**
+   * @implNote Declaration of uniqueness is avoided for better performance on insertion and keeping as light as possible.
+   * This index is not needed.
+   */
+  @Column(name = "fid", columnDefinition = "smallint") // unique = true, nullable = false
   private Integer fid;
 
   @Id

@@ -68,7 +68,7 @@ public class CrimeDataItemProcessor implements ItemProcessor<DataItemDTO, Report
       .occDateTime(getOccDateTime(item))
       .area(area)
       .part12(item.part_1_2())
-      .reportingDistrict(getReportingDistrict(item.rpt_dist())) // 942 exclude
+      .reportingDistrict(getReportingDistrict(item.rpt_dist()))
       .moCodes(moCodesEntitySet.isEmpty() ? null : moCodesEntitySet)
       .victimInfo(victimInfo)
       .premis(premis)
@@ -79,14 +79,14 @@ public class CrimeDataItemProcessor implements ItemProcessor<DataItemDTO, Report
   }
 
   @Nullable
-  private static ReportingDistrictsEntity getReportingDistrict(Integer rptDist) {
-    if (rptDist == null || rptDist == 942) {
+  private static ReportingDistrictsEntity getReportingDistrict(@Nullable final Integer rptDist) {
+    if (rptDist == null) {
       return null;
     }
     return ReportingDistrictsEntity.builder().repDist(rptDist).build();
   }
 
-  private static Set<MoCodesEntity> getMoCodesEntities(DataItemDTO item) {
+  private static Set<MoCodesEntity> getMoCodesEntities(@NonNull final DataItemDTO item) {
     Set<MoCodesEntity> moCodesEntitySet = new HashSet<>();
 
     Set<Short> moCodes = item.mocodes() == null
@@ -96,9 +96,8 @@ public class CrimeDataItemProcessor implements ItemProcessor<DataItemDTO, Report
                            .map(Short::parseShort)
                            .collect(Collectors.toSet());
 
-    moCodes.forEach(
-      m -> moCodesEntitySet.add(MoCodesEntity.builder().id(m).build())
-    );
+    moCodes.forEach(m -> moCodesEntitySet.add(MoCodesEntity.builder().id(m).build()));
+
     return moCodesEntitySet;
   }
 

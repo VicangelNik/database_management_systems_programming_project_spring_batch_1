@@ -20,6 +20,7 @@ import lombok.Setter;
 public class MoCodesEntity {
 
   @Id
+  @Column(name = "id", columnDefinition = "smallint")
   private Short id;
 
   @Column(name = "mo_code", columnDefinition = "varchar(200)")

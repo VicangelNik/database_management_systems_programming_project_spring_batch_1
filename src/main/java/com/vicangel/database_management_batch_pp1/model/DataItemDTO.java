@@ -14,7 +14,7 @@ public record DataItemDTO(Long dr_no,
                           Short crm_cd,
                           String crm_cd_desc,
                           String mocodes, // 4-digit numbers separated by space
-                          Short vict_age,
+                          Integer vict_age,
                           Character vict_sex,
                           Character vict_descent,
                           Integer premic_cd,

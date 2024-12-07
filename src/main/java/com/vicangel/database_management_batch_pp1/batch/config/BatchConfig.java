@@ -257,7 +257,7 @@ class BatchConfig {
   public FlatFileItemReader<DataItemDTO> csvReader() {
     return new FlatFileItemReaderBuilder<DataItemDTO>()
       .linesToSkip(1)
-      .maxItemCount(5000)
+      // .maxItemCount(1_000_000)
       .name("csvCrimeDataReader")
       .resource(new ClassPathResource("csv/Crime_Data_from_2020_to_Present_20241110.csv"))
       .delimited()
@@ -277,7 +277,7 @@ class BatchConfig {
         .crm_cd(readShortValue(fieldSet, "Crm Cd"))
         .crm_cd_desc(fieldSet.readString("Crm Cd Desc"))
         .mocodes(fieldSet.readString("Mocodes"))
-        .vict_age(fieldSet.readShort("Vict Age"))
+        .vict_age(fieldSet.readInt("Vict Age"))
         .vict_sex(readCharacterValue(fieldSet, "Vict Sex"))
         .vict_descent(readCharacterValue(fieldSet, "Vict Descent"))
         .premic_cd(readIntValue(fieldSet, "Premis Cd"))

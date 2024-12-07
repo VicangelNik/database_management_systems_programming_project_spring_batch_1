@@ -265,11 +265,26 @@ id; moCode
 605;Traffic Accident/Traffic related incident
 701;THEFT: Trick or Device
 800;BUNCO
-853;
+840;
+841;
+842;
+843;
+844;
+845;
+846;
+847;
+848;
+849;
+850;
+851;
 852;
+853;
+854;
+855;
 856;
 857;
 858;
+859;
 901;Organized Crime
 902;Political Activity
 903;Hatred/Prejudice
@@ -466,14 +481,30 @@ id; moCode
 1419;Firearm booked as evidence
 1420;Video surveillance booked/available
 1501;Other MO (see rpt)
-1506;Bias: Physical disability
 1505;Bias: Mental disability
+1506;Bias: Physical disability
+1507;Bias:Anti-female
+1508;Bias: Anti-male
+1509;Bias: AntiGender nonconforming
 1510;Bias: AntiTransgender
+1511;Bias: Anti-American Indian/Alaskan Native
+1512;Bias: Anti-Arab
+1513;Bias: Anti-Asian
+1514;Bias: Anti-Black or African American
+1515;Bias: Anti-Citizenship Status
 1516;Bias: Anti-Hispanic or Latino
 1517;Bias: Anti-Multiple Races (Group)
 1518;Bias: Anti-Native Hawaiian or Other Pacific Islander
 1519;Bias: Anti-Other Race/Ethnicity/Aucestry
 1520;Bias: Anti-White
+1521;Bias: AntiAtheism/Agnosticism
+1522;Bias: Anti-Buddhist
+1523;Bias: Anti-Catholic
+1524;Bias: Anti- Eastern Orthodox (Russian/Greek/Other)
+1525;Bias: Anti- Hindu
+1526;Bias: Anti-Islamic (Muslim)
+1527;Bias: Anti-Jehovah’s Witness
+1528;Bias: Anti-Jewish
 1529;Bias: Anti-Mormon
 1530;Bias: Anti-Multiple Religions Group
 1531;Bias: Anti-other Christian
@@ -596,6 +627,8 @@ id; moCode
 2053;Victim targeted based on Religion
 2054;Victim targeted based on Sexual Orientation
 2055;Victim targeted based on Race/Ethnicity/Ancestry
+2056;Victim targeting based on Gender
+2057;Victim targeting based on Disability
 2058;Victim targeting based on Gender NonConforming
 2059;
 2060;
@@ -769,6 +802,8 @@ id; moCode
 3039;T/C - DUI Misdemeanor
 3040;T/C - Resulting from Street Racing/Speed Exhibition
 3062;T/C - Bicyclist in Bicycle Lane
+3063;
+3064;
 3101;T/C - PCF (A) In the Narrative
 3102;T/C - PCF (B) Other Improper Driving
 3103;T/C - PCF (C) Other Than Driver
